@@ -500,31 +500,35 @@
             <use href="./images/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
-        <div class="modal-windows">
-          <h3 class="modal-text">Залиште свої дані, ми вам передзвонимо</h3>
+        <div class="modal-form">
+          <h3 class="modal-title">Залиште свої дані, ми вам передзвонимо</h3>
           <form class="js-speaker-form">
             <label for="name">Ім'я</label>
             <input type="text" name="name" id="name" />
 
             <label for="tel">Телефон</label>
-            <input type="tel" name="phone_number" id="tel" />
+            <input type="tel" name="tel" id="tel" />
 
             <label for="email">Пошта</label>
-            <input type="email" name="email" id="email" />
+            <input type="email" name="mail" id="email" />
+
+            <input type="checkbox" name="" value="agree" id="agree" />
+            <label for="agree"
+              >Погоджуюся з розсилкою та приймаю <a href=""> Умови договору</a></label
+            >
 
             <button class="modal-btn" type="submit">Відправити</button>
           </form>
         </div>
       </div>
     </div>
-    <script src="./js/modal.js">
-            (() => {
+    <script src="./js/modal.js"></script>
+    <script>
+      (() => {
         document.querySelector('.js-speaker-form').addEventListener('submit', e => {
           e.preventDefault();
 
-          new FormData(e.currentTarget).forEach((value, name) =>
-            console.log(`${name}: ${value}`),
-          );
+          new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
         });
       })();
     </script>

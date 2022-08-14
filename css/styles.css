@@ -715,11 +715,11 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--header-bg-color);
 }
-/* Modal-windows */
-.modal-windows {
+
+.modal-form {
   padding: 40px;
 }
-.modal-text {
+.modal-title {
   margin-bottom: 30px;
 
   font-weight: 700;
