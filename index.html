@@ -491,6 +491,23 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscription item">
+          <label class="subscription-form item">
+            <span class="subscription-label">Підпишіться на розсилку</span>
+            <input
+              class="subscription-input"
+              name="subscription-mail"
+              type="email"
+              placeholder="E-mail"
+            />
+          </label>
+          <button class="subscription-btn item" type="submit">
+            Підписатися
+            <svg class="subscription-icon" width="24px" height="24px">
+              <use href="./images/symbol-defs.svg#icon-icon-send"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -500,28 +517,63 @@
             <use href="./images/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
-        <div class="modal-form">
-          <h3 class="modal-title">Залиште свої дані, ми вам передзвонимо</h3>
-          <form class="js-speaker-form">
-            <label for="name">Ім'я</label>
-            <input type="text" name="name" id="name" />
 
-            <label for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel" />
+        <form class="register-form" name="register-form">
+          <strong class="register-title">Залиште свої дані, ми вам передзвонимо</strong>
+          <div class="register-group" role="group">
+            <label class="register-wrap">
+              <span class="register-label">Ім'я</span>
+              <input class="register-field" name="user-name" type="text" />
+              <svg class="register-icon" width="12" height="12">
+                <use href="./images/symbol-defs.svg#icon-user-name"></use>
+              </svg>
+            </label>
+            <label class="register-wrap">
+              <span class="register-label">Телефон</span>
+              <input class="register-field" name="user-phone" type="tel" />
+              <svg class="register-icon" width="13" height="13">
+                <use href="./images/symbol-defs.svg#icon-user-tel"></use>
+              </svg>
+            </label>
+            <label class="register-wrap">
+              <span class="register-label">Пошта</span>
+              <input class="register-field" name="user-mail" type="email" />
+              <svg class="register-icon" width="15" height="12">
+                <use href="./images/symbol-defs.svg#icon-user-mail"></use>
+              </svg>
+            </label>
+            <label class="register-wrap">
+              <span class="register-label">Коментар</span>
+              <textarea
+                class="register-message"
+                name="user-message"
+                rows="5"
+                placeholder="Введіть текст"
+              ></textarea>
+            </label>
+          </div>
 
-            <label for="email">Пошта</label>
-            <input type="email" name="mail" id="email" />
+          <label class="register-agreement">
+            <input
+              class="register-checkbox visually-hidden"
+              type="checkbox"
+              name="user-agreement"
+            />
+            <svg class="register-agreement-icon" width="16" height="15">
+              <use class="icon-uncheck" href="./images/symbol-defs.svg#icon-unchecked"></use>
+              <use class="icon-check" href="./images/symbol-defs.svg#icon-checked"></use>
+            </svg>
+            <span class="register-agreement-text"
+              >Погоджуюся з розсилкою та приймаю
+              <a class="register-agreement-link" href="" target="_blank">Умови договору</a>
+            </span>
+          </label>
 
-            <input type="checkbox" name="" value="agree" id="agree" />
-            <label for="agree"
-              >Погоджуюся з розсилкою та приймаю <a href=""> Умови договору</a></label
-            >
-
-            <button class="modal-btn" type="submit">Відправити</button>
-          </form>
-        </div>
+          <button class="register-btn" type="submit">Відправити</button>
+        </form>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
     <script>
       (() => {
